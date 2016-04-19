@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<!--
+    Transit by TEMPLATED
+    templated.co @templatedco
+    Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>FoodCostVisualization</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <!--[if lte IE 8]><script src="/js/html5shiv.js"></script><![endif]-->
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/skel.min.js"></script>
+    <script src="./js/skel-layers.min.js"></script>
+    <script src="./js/init.js"></script>
+    <script src="js/otherFunc.js"></script>
+    
+    <noscript>
+      <link rel="stylesheet" href="/css/skel.css"/>
+      <link rel="stylesheet" href="/css/style.css"/>
+      <link rel="stylesheet" href="/css/style-xlarge.css"/>
+      </noscript>
+    </head>
+  <body class="landing">
+
+    <!-- Header -->
+    <header id="header">
+      <h1><a href="/index.html">FoodCostVisualization</a></h1>
+      <nav id="nav">
+	<ul>
+	  <li><a href="/index.html" class="button special">Home</a></li>
+	  <li><a href="#">About Us</a></li>
+	  </ul>
+	</nav>
+      </header>
+
+    <!-- One -->
+    <section id="one" class="wrapper style1 special">
+      <div class="container">
+	<header class="major">
+	  <h2>Donation Payment Information</h2>
+	  <p>Fill out information below.</p>
+	  </header>
+	
+	<link rel="stylesheet" href="./wickedpicker/stylesheets/wickedpicker.css">
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="wickedpicker/src/wickedpicker.js"></script>
+
+	<form method="post" action="#">
+	  <div class="row uniform 50%">
+	    <div class="6u 12u$(2)">
+	      <label for="card"> Name on Card </label>
+	      <input name="cardName" type="text"/>
+
+	      <label for="expMonth"> Expiration Month </label>
+              <select id="expMonth">
+		<option disabled selected value> -- select an option -- </option>
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+		<option value="4">4</option>
+		<option value="5">5</option>
+		<option value="6">6</option>
+		<option value="7">7</option>
+		<option value="8">8</option>
+		<option value="9">9</option>
+		<option value="10">10</option>
+		<option value="11">11</option>
+		<option value="12">12</option>
+		</select>
+
+	      <label for="expDay"> Expiration Day </label>
+	      <select id="expDay">
+                <option disabled selected value> -- select an option -- </option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+		<option value="13">13</option>
+		<option value="14">14</option>
+		<option value="15">15</option>
+		<option value="16">16</option>
+		<option value="17">17</option>
+		<option value="18">18</option>
+		<option value="19">19</option>
+		<option value="20">20</option>
+		<option value="21">21</option>
+		<option value="22">22</option>
+		<option value="23">23</option>
+		<option value="24">24</option>
+		<option value="25">25</option>
+		<option value="26">26</option>
+		<option value="27">27</option>
+		<option value="28">28</option>
+		<option value="29">29</option>
+		<option value="30">30</option>
+		<option value="31">31</option>
+                </select>
+	      
+	      <label for="address"> Billing Address </label>
+	      <input name="address" type="text"/>
+	      
+	      <label for="city"> City </label>
+	      <input name="city" type="text"/>
+	      
+	      <label for="state"> State </label>
+	      <select id="state">
+		<option disabled selected value> -- select an option -- </option>
+		<option value="WashingtonDC">Washington D.C.</option>
+		<option value="Alabama">Alabama</option>
+		<option value="Alaska">Alaska</option>
+		<option value="Arizona">Arizona</option>
+		<option value="Arkansas">Arkansas</option>
+		<option value="California">California</option>
+		<option value="Colorado">Colorado</option>
+		<option value="Connecticut">Connecticut</option>
+		<option value="Delaware">Delaware</option>
+		<option value="Florida">Florida</option>
+		<option value="Georgia">Georgia</option>
+		<option value="Hawaii">Hawaii</option>
+		<option value="Idaho">Idaho</option>
+		<option value="Illinois">Illinois</option>
+		<option value="Indiana">Indiana</option>
+		<option value="Iowa">Iowa</option>
+		<option value="Kansas">Kansas</option>
+		<option value="Kentucky">Kentucky</option>
+		<option value="Louisiana">Louisiana</option>
+		<option value="Maine">Maine</option>
+		<option value="Maryland">Maryland</option>
+		<option value="Massachusetts">Massachusetts</option>
+		<option value="Michigan">Michigan</option>
+		<option value="Minnesota">Minnesota</option>
+		<option value="Misssissippi">Mississippi</option>
+		<option value="Missouri">Missouri</option>
+		<option value="Montana">Montana</option>
+		<option value="Nebraska">Nebraska</option>
+		<option value="Nevada">Nevada</option>
+		<option value="New Hampshire">New Hampshire</option>
+		<option value="New Jersey">New Jersey</option>
+		<option value="New Mexico">New Mexico</option>
+		<option value="New York">New York</option>
+		<option value="North Carolina">North Carolina</option>
+		<option value="North Dakota">North Dakota</option>
+		<option value="Ohio">Ohio</option>
+		<option value="Oklahoma">Oklahoma</option>
+		<option value="Oregon">Oregon</option>
+		<option value="Pennsylvania">Pennsylvania</option>
+		<option value="Rhode Island">Rhode Island</option>
+		<option value="South Carolina">South Carolina</option>
+		<option value="South Dakota">South Dakota</option>
+		<option value="Tennessee">Tennessee</option>
+		<option value="Texas">Texas</option>
+		<option value="Utah">Utah</option>
+		<option value="Vermont">Vermont</option>
+		<option value="Virginia">Virginia</option>
+		<option value="Washington">Washington</option>
+		<option value="West Virginia">West Virginia</option>
+		<option value="Wisconsin">Wisconsin</option>
+		<option value="Wyoming">Wyoming</option>
+		</select>
+	      
+	      <label for="zipCode"> Zip Code </label>
+	      <input name="zipCode" type="text"/>
+	
+	</div>
+      </section>
+
+    
+    
+
+    <!-- Footer -->
+    <footer id="footer">
+      <div class="container">
+	<section class="links">
+	  <div class="row">
+	    <section class="3u 6u(medium) 12u$(small)">
+	      <h3>Lorem ipsum dolor</h3>
+	      <ul class="unstyled">
+		<li><a href="#">Lorem ipsum dolor sit</a></li>
+		<li><a href="#">Nesciunt itaque, alias possimus</a></li>
+		<li><a href="#">Optio rerum beatae autem</a></li>
+		<li><a href="#">Nostrum nemo dolorum facilis</a></li>
+		<li><a href="#">Quo fugit dolor totam</a></li>
+		</ul>
+	      </section>
+	    <section class="3u 6u$(medium) 12u$(small)">
+	      <h3>Culpa quia, nesciunt</h3>
+	      <ul class="unstyled">
+		<li><a href="#">Lorem ipsum dolor sit</a></li>
+		<li><a href="#">Reiciendis dicta laboriosam enim</a></li>
+		<li><a href="#">Corporis, non aut rerum</a></li>
+		<li><a href="#">Laboriosam nulla voluptas, harum</a></li>
+		<li><a href="#">Facere eligendi, inventore dolor</a></li>
+		</ul>
+	      </section>
+	    <section class="3u 6u(medium) 12u$(small)">
+	      <h3>Neque, dolore, facere</h3>
+	      <ul class="unstyled">
+		<li><a href="#">Lorem ipsum dolor sit</a></li>
+		<li><a href="#">Distinctio, inventore quidem nesciunt</a></li>
+		<li><a href="#">Explicabo inventore itaque autem</a></li>
+		<li><a href="#">Aperiam harum, sint quibusdam</a></li>
+		<li><a href="#">Labore excepturi assumenda</a></li>
+		</ul>
+	      </section>
+	    <section class="3u$ 6u$(medium) 12u$(small)">
+	      <h3>Illum, tempori, saepe</h3>
+	      <ul class="unstyled">
+		<li><a href="#">Lorem ipsum dolor sit</a></li>
+		<li><a href="#">Recusandae, culpa necessita nam</a></li>
+		<li><a href="#">Cupiditate, debitis adipisci blandi</a></li>
+		<li><a href="#">Tempore nam, enim quia</a></li>
+		<li><a href="#">Explicabo molestiae dolor labore</a></li>
+		</ul>
+	      </section>
+	    </div>
+	  </section>
+	<div class="row">
+	  <div class="8u 12u$(medium)">
+	    <ul class="copyright">
+	      <li>&copy; 2016. All rights reserved.</li>
+	      <li>Design: <a href="http://templated.co">TEMPLATED</a></li>
+	      <li>Images: <a href="http://unsplash.com">Unsplash</a></li>
+	      </ul>
+	    </div>
+	  <div class="4u$ 12u$(medium)">
+	    <ul class="icons">
+	      <li>
+		<a class="/icon rounded fa-facebook"><span class="label">Facebook</span></a>
+		</li>
+	      <li>
+		<a class="icon rounded fa-twitter"><span class="label">Twitter</span></a>
+		</li>
+	      <li>
+		<a class="icon rounded fa-google-plus"><span class="label">Google+</span></a>
+		</li>
+	      <li>
+		<a class="icon rounded fa-linkedin"><span class="label">LinkedIn</span></a>
+		</li>
+	      </ul>
+	    </div>
+	  </div>
+	</div>
+      </footer>
+
+    </body>
+</html>
