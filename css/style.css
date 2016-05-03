@@ -1,3 +1,22 @@
+label {
+    line-height: 30px;
+    width:100px;
+    clear:left;
+}
+
+input, label, select, button {
+    float: left;
+}
+
+#info {
+    float: left;
+}
+
+#submit_cancel {
+    float: left;
+    clear: left;
+}
+
 * {
   margin: 0;
   padding: 0;
