@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Header -->
+  <header id="header">
+    <h1><a href="/donation.html">Food Cost Visualization</a></h1>
+    
+    <nav id="nav">
+      <a href="donation.html" class="button special">Home</a>
+    </nav>
+    
+    <link rel="stylesheet" href="css/style.css">
+  </header>
+
+  <!-- Body -->
+  <body id = "body">
+    <div class="container">
+      <header class="major">
+	<h2>Donation Payment Information</h2>
+        <br>
+	<p>Fill out information below:</p>
+        <br>
+      </header>
+          
+      <form method="post" action="#">
+	<div class="row uniform 50%">
+	  <div id="info">
+	    <label for="breakfast">Breakfast $</label>
+            <input name="breakfast" type="text"/>
+            <br>
+	    
+            <label for="lunch">Lunch $</label>
+            <input name="lunch" type="text"/>
+            <br>
+	    
+	    <label for="dinner">Dinner $</label>
+            <input name="dinner" type="text"/>
+	    <br>
+
+	    <label for="snacks">Snacks $</label>
+            <input name="snacks" type="text"/>
+	    <br>
+
+	    <label for="dessert">Dessert $</label>
+            <input name="dessert" type="text"/>
+            <br>
+	    
+	  </div>
+        </div>
+      </form>  
+    </div>
+    
+    <div id = "submit_cancel">
+      <br>
+      <button onclick="location.href = 'input_results.html'" class="button big" id = "submitButton">Submit</button>
+      <button onclick="location.href = 'donation.html'" class="button big" id = "cancelButton">Cancel</button>    
+    </div>
+  </body>
+</html>
