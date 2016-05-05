@@ -12,28 +12,26 @@
     android:weightSum="1">
 
     <Button
-        android:layout_width="355dp"
-        android:layout_height="71dp"
+        android:layout_width="355sp"
+        android:layout_height="75sp"
         android:text="Donate"
         android:onClick="donate"
         android:background="#FFFF4000"
         android:id="@+id/button" />
 
     <Button
-        android:layout_width="354dp"
-        android:layout_height="wrap_content"
+        android:layout_width="355sp"
+        android:layout_height="75sp"
         android:text="Enter Food Cost"
         android:background="#FFFFFF00"
         android:onClick="enterFoodCost"
-        android:id="@+id/button2"
-        android:layout_weight="0.11" />
+        android:id="@+id/button2"/>
 
     <Button
-        android:layout_width="351dp"
-        android:layout_height="wrap_content"
+        android:layout_width="355sp"
+        android:layout_height="75sp"
         android:text="Compare Food Cost"
         android:background="#FF00FFFF"
-        android:id="@+id/button3"
-        android:layout_weight="0.06" />
+        android:id="@+id/button3"/>
 
 </LinearLayout>

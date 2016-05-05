@@ -53,6 +53,10 @@ public class InputActivity extends AppCompatActivity {
         _pieChart.setData(costs, _fieldNames);
     }
 
+    public void cancel(View view) {
+        finish();
+    }
+
     public void save(View view) {
         startActivity(new Intent(InputActivity.this, SummaryActivity.class));
     }
