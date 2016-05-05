@@ -13,6 +13,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    public void donate(View view) {
+        startActivity(new Intent(MainActivity.this, DonateActivity.class));
+    }
+
     public void enterFoodCost(View view) {
         startActivity(new Intent(MainActivity.this, InputActivity.class));
     }

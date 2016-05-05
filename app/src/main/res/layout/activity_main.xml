@@ -15,6 +15,7 @@
         android:layout_width="355dp"
         android:layout_height="71dp"
         android:text="Donate"
+        android:onClick="donate"
         android:background="#FFFF4000"
         android:id="@+id/button" />
 
