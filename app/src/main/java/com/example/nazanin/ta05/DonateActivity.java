@@ -48,6 +48,10 @@ public class DonateActivity extends AppCompatActivity {
         otherText.setText("25.00");
     }
 
+    public void donate(View view) {
+        startActivity(new Intent(DonateActivity.this, DonationSummaryActivity.class));
+    }
+
     public void cancel(View view) {
         finish();
     }

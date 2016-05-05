@@ -329,6 +329,7 @@
             android:layout_width="1dp"
             android:layout_height="1dp"
             android:text="Donate"
+            android:onClick="donate"
             android:background="#FFFF4000"
             android:id="@+id/donateButton"
             android:layout_column="1"

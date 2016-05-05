@@ -9,6 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".DonateActivity"/>
+        <activity android:name=".DonationSummaryActivity"/>
         <activity android:name=".InputActivity"/>
         <activity android:name=".SummaryActivity"/>
         <activity android:name=".MainActivity">
