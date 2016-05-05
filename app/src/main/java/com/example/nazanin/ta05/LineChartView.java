@@ -137,7 +137,8 @@ public class LineChartView extends View {
             }
         }
 
-        canvas.drawCircle(centerX, centerY, radius, _paintBorder);
+        canvas.drawRect(centerX - radius, centerY - radius,
+                        centerX + radius, centerY + radius, _paintBorder);
     }
 
     @Override
