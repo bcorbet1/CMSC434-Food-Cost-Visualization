@@ -6,8 +6,8 @@
     <TextView
         android:layout_width="1dp"
         android:layout_height="1dp"
-        android:text="Breakfast"
-        android:id="@+id/breakfastText"
+        android:text="First Name"
+        android:id="@+id/firstNameText"
         android:layout_column="0"
         android:layout_row="1"
         android:layout_columnWeight="1"
@@ -19,8 +19,8 @@
     <TextView
         android:layout_width="1dp"
         android:layout_height="1dp"
-        android:text="Lunch"
-        android:id="@+id/lunchText"
+        android:text="Last Name"
+        android:id="@+id/lastNameText"
         android:layout_column="0"
         android:layout_row="2"
         android:layout_columnWeight="1"
@@ -32,8 +32,8 @@
     <TextView
         android:layout_width="1dp"
         android:layout_height="1dp"
-        android:text="Dinner"
-        android:id="@+id/dinnerText"
+        android:text="Address"
+        android:id="@+id/addressText"
         android:layout_column="0"
         android:layout_row="3"
         android:layout_columnWeight="1"
@@ -45,10 +45,36 @@
     <TextView
         android:layout_width="1dp"
         android:layout_height="1dp"
-        android:text="Snacks"
-        android:id="@+id/snacksText"
+        android:text="City"
+        android:id="@+id/cityText"
         android:layout_column="0"
         android:layout_row="4"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:textAlignment="textEnd"
+        android:paddingRight="30dp"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:text="State"
+        android:id="@+id/stateText"
+        android:layout_column="0"
+        android:layout_row="5"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:textAlignment="textEnd"
+        android:paddingRight="30dp"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:text="Zip Code"
+        android:id="@+id/zipCodeText"
+        android:layout_column="0"
+        android:layout_row="6"
         android:layout_columnWeight="1"
         android:layout_rowWeight="1"
         android:textAlignment="textEnd"
@@ -58,21 +84,21 @@
     <EditText
         android:layout_width="1dp"
         android:layout_height="1dp"
-        android:inputType="numberDecimal"
         android:ems="10"
-        android:id="@+id/breakfastEditText"
+        android:id="@+id/firstNameEditText"
         android:paddingEnd="30dp"
         android:layout_row="1"
         android:layout_column="1"
         android:layout_columnWeight="1"
-        android:layout_rowWeight="1" />
+        android:layout_rowWeight="1"
+        android:inputType="textPersonName" />
 
     <EditText
         android:layout_width="1dp"
         android:layout_height="1dp"
-        android:inputType="numberDecimal"
+        android:inputType="textPersonName"
         android:ems="10"
-        android:id="@+id/lunchEditText"
+        android:id="@+id/lastNameEditText"
         android:paddingEnd="30dp"
         android:layout_row="2"
         android:layout_column="1"
@@ -82,9 +108,9 @@
     <EditText
         android:layout_width="1dp"
         android:layout_height="1dp"
-        android:inputType="numberDecimal"
+        android:inputType="textPostalAddress"
         android:ems="10"
-        android:id="@+id/dinnerEditText"
+        android:id="@+id/addressEditText"
         android:paddingEnd="30dp"
         android:layout_row="3"
         android:layout_column="1"
@@ -94,11 +120,35 @@
     <EditText
         android:layout_width="1dp"
         android:layout_height="1dp"
-        android:inputType="numberDecimal"
+        android:inputType="text"
         android:ems="10"
-        android:id="@+id/snacksEditText"
+        android:id="@+id/cityEditText"
         android:paddingEnd="30dp"
         android:layout_row="4"
+        android:layout_column="1"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1" />
+
+    <EditText
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:inputType="text"
+        android:ems="10"
+        android:id="@+id/stateEditText"
+        android:paddingEnd="30dp"
+        android:layout_row="5"
+        android:layout_column="1"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1" />
+
+    <EditText
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/zipCodeEditText"
+        android:paddingEnd="30dp"
+        android:layout_row="6"
         android:layout_column="1"
         android:layout_columnWeight="1"
         android:layout_rowWeight="1" />
@@ -109,7 +159,7 @@
         android:text="Cancel"
         android:id="@+id/cancelButton"
         android:layout_column="0"
-        android:layout_row="5"
+        android:layout_row="7"
         android:layout_columnWeight="1"
         android:layout_rowWeight="1" />
 
@@ -119,9 +169,8 @@
         android:text="Save"
         android:background="#FFA0FFFF"
         android:id="@+id/saveButton"
-        android:onClick="save"
         android:layout_column="1"
-        android:layout_row="5"
+        android:layout_row="7"
         android:layout_columnWeight="1"
         android:layout_rowWeight="1" />
 
