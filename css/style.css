@@ -17,6 +17,16 @@ input, label, select, button {
     clear: left;
 }
 
+#submitButton, #cancelButton {
+    margin: 5px;
+}
+
+.divider{
+    width:10px;
+    height:auto;
+    display:inline-block;
+}
+
 * {
   margin: 0;
   padding: 0;
