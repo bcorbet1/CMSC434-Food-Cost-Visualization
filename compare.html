@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Header -->
+    <header id="header">
+      <h1><a href="/donation.html">Food Cost Visualization</a></h1>
+      
+      <nav id="nav">
+	<a href="donation.html" class="button special">Home</a>
+      </nav>
+    
+      <link rel="stylesheet" href="css/style.css">
+    </header>
+
+    <!-- Body -->
+    <body id = "body">
+      <div class="container">
+	<header class="major">
+	  <h2>Donation Payment Information</h2>
+          <br>
+	  <p>Choose a Country to Find Out Its Food Costs:</p>
+          <br>
+	</header>
+          
+	<form method="post" action="#">
+	  <div class="row uniform 50%">
+	    <div id="info">
+              
+	      <label for="country">Country </label>
+	      <select id="country">
+		<option disabled selected value> -- select an option -- </option>
+		<option value="United States of America">USA</option>
+		<option value="Ghana">Ghana</option>
+                <option value="England">England</option>
+                <option value="France">France</option>
+                <option value="Brazil">Brazil</option>
+                <option value="Spain">Spain</option>
+                <option value="Italy">Italy</option>
+                <option value="Argentina">Argentina</option>
+                <option value="Canada">Canada</option>
+                <option value="India">India</option>
+                <option value="Germany">Germany</option>
+                <option value="Mexico">Mexico</option>
+	      </select>
+              <br>
+                   
+	    </div>
+          </div>
+	</form>  
+      </div>
+    
+      <div id = "submit_cancel">
+        <br>
+        <button onclick="location.href = 'costs.html'" class="button big" id = "submitButton">Submit</button>
+        <button onclick="location.href = 'donation.html'" class="button big" id = "cancelButton">Cancel</button>    
+      </div>
+    </body>
+</html>
