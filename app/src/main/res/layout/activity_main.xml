@@ -16,22 +16,29 @@
         android:layout_height="75sp"
         android:text="Donate"
         android:onClick="donate"
-        android:background="#FFFF4000"
-        android:id="@+id/button" />
+        android:background="@drawable/redbutton"
+        android:id="@+id/button"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp" />
 
     <Button
         android:layout_width="355sp"
         android:layout_height="75sp"
         android:text="Enter Food Cost"
-        android:background="#FFFFFF00"
         android:onClick="enterFoodCost"
-        android:id="@+id/button2"/>
+        android:background="@drawable/orangebutton"
+        android:id="@+id/button2"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp" />
 
     <Button
         android:layout_width="355sp"
         android:layout_height="75sp"
         android:text="Compare Food Cost"
-        android:background="#FF00FFFF"
-        android:id="@+id/button3"/>
+        android:onClick="compareFoodCost"
+        android:background="@drawable/greenbutton"
+        android:id="@+id/button3"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="40dp" />
 
 </LinearLayout>

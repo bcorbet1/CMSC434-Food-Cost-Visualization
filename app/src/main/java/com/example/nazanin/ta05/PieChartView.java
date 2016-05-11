@@ -24,17 +24,17 @@ import java.text.MessageFormat;
  */
 public class PieChartView extends View {
 
-    private ImageView _imageView;
-
-    private Canvas _offScreenCanvas = null;
-    private Bitmap _offScreenBitmap = null;
-
     private Paint _paint = new Paint();
+    private Paint _paintBlank = new Paint();
     private Paint _paintBorder = new Paint();
     private Paint _paintBackground = new Paint();
 
-    private int[] _colors = {Color.CYAN, Color.YELLOW, Color.MAGENTA,
-                            Color.GREEN, Color.RED, Color.BLUE, Color.GRAY};
+    private int[] _colors = {
+        0xFF57B196, 0xFFFFD25A, 0xFFFF837B, 0xFF7E6E8C
+    };
+
+//            {Color.CYAN, Color.YELLOW, Color.MAGENTA,
+//                            Color.GREEN, Color.RED, Color.BLUE, Color.GRAY};
 
     private double[] _values;
     private double[] _percentages;
@@ -76,6 +76,11 @@ public class PieChartView extends View {
         _paint.setStrokeJoin(Paint.Join.ROUND);
         _paint.setStrokeCap(Paint.Cap.ROUND);
 
+        _paintBlank.setColor(Color.LTGRAY);
+        _paintBlank.setStrokeWidth(3);
+        _paintBlank.setStyle(Paint.Style.FILL);
+        _paintBlank.setAlpha(50);
+
         _paintBorder.setColor(Color.BLACK);
         _paintBorder.setStrokeWidth(3);
         _paintBorder.setStyle(Paint.Style.STROKE);
@@ -83,8 +88,6 @@ public class PieChartView extends View {
 
         _paintBackground.setColor(Color.WHITE);
         _paintBackground.setStyle(Paint.Style.FILL);
-
-        //_paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.MULTIPLY));
     }
 
     public void setData(double[] values, String[] labels) {
@@ -104,40 +107,8 @@ public class PieChartView extends View {
     }
 
     @Override
-    protected void onSizeChanged (int w, int h, int oldw, int oldh){
-
-        Bitmap bitmap = getDrawingCache();
-        Log.v("onSizeChanged", MessageFormat.format("bitmap={0}, w={1}, h={2}, oldw={3}, oldh={4}", bitmap, w, h, oldw, oldh));
-        if(bitmap != null) {
-            _offScreenBitmap = getDrawingCache().copy(Bitmap.Config.ARGB_8888, true);
-            _offScreenCanvas = new Canvas(_offScreenBitmap);
-        }
-    }
-
-    /**
-     * Sets the ImageView, which hosts the image that we will paint in this view
-     * @param imageView
-     */
-    public void setImageView(ImageView imageView){
-        _imageView = imageView;
-    }
-
-    /**
-     * Clears the painting
-     */
-    public void clearPainting(){
-        _offScreenCanvas.drawRect(0, 0, _offScreenCanvas.getWidth(), _offScreenCanvas.getHeight(), _paintBackground);
-        invalidate();
-    }
-
-    @Override
     public void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-
-        if(_offScreenBitmap != null) {
-            _paint.setAlpha(255);
-            canvas.drawBitmap(_offScreenBitmap, 0, 0, _paint);
-        }
 
         int centerX = canvas.getWidth() / 2;
         int centerY = canvas.getHeight() / 2;
@@ -148,10 +119,14 @@ public class PieChartView extends View {
         int minY = centerY - radius;
         int maxY = centerY + radius;
 
+        canvas.drawRect(0, 0, canvas.getWidth(), canvas.getHeight(), _paintBackground);
+
         if (_percentages != null) {
+            int count = 0;
             float prevAngle = 0;
             for (int i = 0; i < _percentages.length; i++) {
                 if (_percentages[i] > 0) {
+                    count++;
                     float angle = (float) (_percentages[i] * 360);
                     _paint.setColor(_colors[i]);
                     canvas.drawArc(minX, minY, maxX, maxY, prevAngle, angle, true, _paint);
@@ -159,23 +134,16 @@ public class PieChartView extends View {
                     prevAngle += angle;
                 }
             }
+            if (count > 0) {
+                canvas.drawCircle(centerX, centerY, radius, _paintBorder);
+                if (count == 1) {
+                    canvas.drawLine(centerX, centerY, centerX + radius, centerY, _paintBorder);
+                }
+            } else {
+                canvas.drawCircle(centerX, centerY, radius, _paintBlank);
+            }
+        } else {
+            canvas.drawCircle(centerX, centerY, radius, _paintBlank);
         }
-        canvas.drawCircle(centerX, centerY, radius, _paintBorder);
-    }
-
-    @Override
-    public boolean onTouchEvent(MotionEvent motionEvent) {
-
-        //Basically, the way this works is to listen for Touch Down and Touch Move events and determine where those
-        //touch locations correspond to the bitmap in the ImageView. You can then grab info about the bitmap--like the pixel color--
-        //at that location
-
-        invalidate();
-
-        return true;
-    }
-
-    public Bitmap getBitmap() {
-        return _offScreenBitmap;
     }
 }

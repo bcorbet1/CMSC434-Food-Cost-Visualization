@@ -33,10 +33,12 @@
             android:text="$10"
             android:id="@+id/tenButton"
             android:onClick="ten"
+            android:background="@drawable/graybutton"
             android:layout_column="1"
             android:layout_row="0"
             android:layout_columnWeight="1"
-            android:layout_rowWeight="1" />
+            android:layout_rowWeight="1"
+            android:layout_margin="2dp" />
 
         <Button
             android:layout_width="1dp"
@@ -44,10 +46,12 @@
             android:text="$25"
             android:id="@+id/twentyFiveButton"
             android:onClick="twentyFive"
+            android:background="@drawable/graybutton"
             android:layout_column="2"
             android:layout_row="0"
             android:layout_columnWeight="1"
-            android:layout_rowWeight="1" />
+            android:layout_rowWeight="1"
+            android:layout_margin="2dp" />
 
         <EditText
             android:layout_width="1dp"
@@ -320,22 +324,29 @@
             android:text="Cancel"
             android:id="@+id/cancelButton"
             android:onClick="cancel"
+            android:background="@drawable/graybutton"
             android:layout_column="0"
             android:layout_row="7"
             android:layout_columnWeight="1"
-            android:layout_rowWeight="1" />
+            android:layout_rowWeight="1"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="5dp" />
 
         <Button
             android:layout_width="1dp"
             android:layout_height="1dp"
             android:text="Donate"
             android:onClick="donate"
-            android:background="#FFFF4000"
+            android:background="@drawable/redbutton"
             android:id="@+id/donateButton"
             android:layout_column="1"
             android:layout_row="7"
             android:layout_columnWeight="1"
-            android:layout_rowWeight="1" />
+            android:layout_rowWeight="1"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp" />
 
     </GridLayout>
 </LinearLayout>

@@ -16,7 +16,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Home"
-        android:background="#FF00FFFF"
+        android:background="@drawable/bluebutton"
         android:id="@+id/homeButton"
         android:onClick="home"
         android:gravity="center"

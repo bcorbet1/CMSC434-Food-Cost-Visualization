@@ -20,4 +20,8 @@ public class MainActivity extends AppCompatActivity {
     public void enterFoodCost(View view) {
         startActivity(new Intent(MainActivity.this, InputActivity.class));
     }
+
+    public void compareFoodCost(View view) {
+        startActivity(new Intent(MainActivity.this, CompareActivity.class));
+    }
 }

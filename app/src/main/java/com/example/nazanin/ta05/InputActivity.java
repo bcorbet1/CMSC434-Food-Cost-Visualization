@@ -7,6 +7,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
@@ -27,6 +28,18 @@ public class InputActivity extends AppCompatActivity {
         _costField[2] = (EditText)findViewById(R.id.dinnerEditText);
         _costField[3] = (EditText)findViewById(R.id.snacksEditText);
 
+
+//        View.OnFocusChangeListener focusListener = new View.OnFocusChangeListener() {
+//            public void onFocusChange(View v, boolean hasFocus) {
+//                if (!hasFocus) {
+//                    EditText editText = (EditText) v;
+//                    String text = editText.getText().toString();
+//                    String formatted = String.format("%.2f", text);
+//                    editText.setText(formatted);
+//                }
+//            }
+//        };
+
         TextWatcher listener = new TextWatcher() {
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
             public void afterTextChanged(Editable s) {
@@ -37,6 +50,7 @@ public class InputActivity extends AppCompatActivity {
 
         for (EditText field : _costField) {
             field.addTextChangedListener(listener);
+//            field.setOnFocusChangeListener(focusListener);
         }
     }
 
@@ -44,8 +58,9 @@ public class InputActivity extends AppCompatActivity {
         double sum = 0;
         double[] costs = new double[_costField.length];
         for (int i = 0; i < _costField.length; i++) {
+            String text = _costField[i].getText().toString().replace("\\$", "");
             try {
-                costs[i] = Double.parseDouble(_costField[i].getText().toString());
+                costs[i] = Double.parseDouble(text);
             } catch (NumberFormatException e) {
                 costs[i] = 0;
             }
